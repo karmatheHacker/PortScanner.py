@@ -3,7 +3,6 @@ import threading
 import sys
 from queue import Queue
 
-# Port-to-service mapping (common ports)
 COMMON_PORTS = {
     21: "FTP",
     22: "SSH",
@@ -20,7 +19,6 @@ COMMON_PORTS = {
     8080: "HTTP-Alt"
 }
 
-# Thread-safe queue for ports
 port_queue = Queue()
 open_ports = []
 print_lock = threading.Lock()
